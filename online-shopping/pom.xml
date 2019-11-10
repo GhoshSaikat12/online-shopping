@@ -17,6 +17,13 @@
 
 
 	<dependencies>
+
+		<!-- Linking Backend Project -->
+		<dependency>
+			<groupId>com.saikat</groupId>
+			<artifactId>shoppingBackend</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 		<!-- JAVA EE API -->
 		<dependency>
 			<groupId>javax</groupId>
@@ -24,22 +31,22 @@
 			<version>${javaee.version}</version>
 			<scope>provided</scope>
 		</dependency>
-		
+
 		<!-- SPRING -->
-		
+
 		<dependency>
-		    <groupId>org.springframework</groupId>
-		    <artifactId>spring-webmvc</artifactId>
-		    <version>${spring.version}</version>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>${spring.version}</version>
 		</dependency>
-		
+
 		<!-- JSTL -->
-		
+
 		<dependency>
-		    <groupId>jstl</groupId>
-		    <artifactId>jstl</artifactId>
-		    <version>1.2</version>
-		</dependency>	
+			<groupId>jstl</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+		</dependency>
 
 		<!-- JUNIT API -->
 		<dependency>
@@ -51,7 +58,7 @@
 	</dependencies>
 	<build>
 		<finalName>online-shopping</finalName>
-		
+
 		<!-- Update Latest Version Of Java -->
 		<plugins>
 			<plugin>

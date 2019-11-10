@@ -48,13 +48,18 @@
 			</c:if>
 
 			<!-- Load when user clicks About -->
-			<c:if test="${userHomeAbout==true }">
+			<c:if test="${userClickAbout==true }">
 				<%@include file="./About.jsp"%>
 			</c:if>
 
 			<!-- Load when user clicks Contact -->
-			<c:if test="${userHomeContact==true }">
+			<c:if test="${userClickContact==true }">
 				<%@include file="./Contact.jsp"%>
+			</c:if>
+			
+			<!-- Load when user clicks Contact -->
+			<c:if test="${userClickAllProducts==true or userClickCategoryProducts==true}">
+				<%@include file="./ViewProducts.jsp"%>
 			</c:if>
 
 		</div>
