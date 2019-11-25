@@ -6,7 +6,7 @@
 
 <spring:url var="css" value="/resources/css" />
 <spring:url var="js" value="/resources/js" />
-<spring:url var="images" value="/resources/Images" />
+<spring:url var="images" value="/resources/images" />
 <c:set var="contextroot" value="${pageContext.request.contextPath}" />
 <!DOCTYPE html>
 <html lang="en">
@@ -23,10 +23,14 @@
 
 <script>
 	window.menu = '${title}';
+	window.contextRoot ='${contextroot}';
 </script>
 
 <!-- Bootstrap core CSS -->
 <link href="${css}/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap dataTable CSS -->
+<link href="${css}/dataTables.bootstrap.css" rel="stylesheet">
 
 <!-- Bootstrap theme CSS -->
 <link href="${css}/bootstrap-simplex-theme.css" rel="stylesheet">
@@ -57,9 +61,14 @@
 				<%@include file="./Contact.jsp"%>
 			</c:if>
 			
-			<!-- Load when user clicks Contact -->
+			<!-- Load when user clicks View Products -->
 			<c:if test="${userClickAllProducts==true or userClickCategoryProducts==true}">
 				<%@include file="./ViewProducts.jsp"%>
+			</c:if>
+			
+			<!-- Load when user clicks Single Product -->
+			<c:if test="${userClickShowProduct==true}">
+				<%@include file="./SingleProduct.jsp"%>
 			</c:if>
 
 		</div>
@@ -71,7 +80,11 @@
 		<!-- Bootstrap core JavaScript -->
 		<script src="${js}/jquery.js"></script>
 		<script src="${js}/bootstrap.min.js"></script>
-
+		
+		<!-- DataTables -->
+		<script src="${js}/jquery.dataTables.js"></script>
+		<script src="${js}/dataTables.bootstrap.js"></script>
+		
 		<!-- Self Coded JavaScript -->
 		<script src="${js}/myApp.js"></script>
 
