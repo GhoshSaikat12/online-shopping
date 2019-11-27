@@ -19,12 +19,10 @@ Custom Styling
 	
 	min-height:100%;
 	position:relative;
-	
 }
 
 .content{
-	
-	
+	padding-bottom:60px;
 }
 
 .footer{
@@ -35,6 +33,7 @@ Custom Styling
 	width:100%;
 	padding:0px;
 	max-width:100%;
+	margin-top: auto;
 }
 
 .dataTableImg{

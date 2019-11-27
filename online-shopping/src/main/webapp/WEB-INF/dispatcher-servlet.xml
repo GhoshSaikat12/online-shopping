@@ -10,7 +10,7 @@
    http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
 	<context:component-scan
-		base-package="com.saikat.onlineshopping.controller" />
+		base-package="com.saikat.onlineshopping" />
 	<context:component-scan
 		base-package="com.saikat.shoppingBackend" />
 
